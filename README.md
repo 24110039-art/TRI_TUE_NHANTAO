@@ -29,6 +29,7 @@
 
 Ký hiệu bản đồ: `P` = Pacman, `G` = Goal, `W` = Wall, khoảng trắng = ô trống.
 - Trạng thái bắt đầu
+	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19
 0	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W
 1	P									W										W
 2	W				W	W	W	W		W			W			W				W
@@ -44,8 +45,10 @@ Ký hiệu bản đồ: `P` = Pacman, `G` = Goal, `W` = Wall, khoảng trắng =
 12	W			W	W	W	W	W	W	W	W	W	W	W	W	W				W
 13	W																			G
 14	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W
+
   
 - Trạng thái kết thúc
+	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19
 0	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W
 1										W										W
 2	W				W	W	W	W		W			W			W				W
@@ -61,6 +64,7 @@ Ký hiệu bản đồ: `P` = Pacman, `G` = Goal, `W` = Wall, khoảng trắng =
 12	W			W	W	W	W	W	W	W	W	W	W	W	W	W				W
 13	W																			P
 14	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W
+
 
 ---
 
