@@ -4,10 +4,9 @@
 ##  Giới thiệu
 
 Đồ án xây dựng hệ thống mô phỏng trò chơi **Pacman** trên nền tảng đồ họa 2D (Python + Pygame), trong đó tác nhân Pacman phải tự động tìm đường từ vị trí xuất phát (P) đến đích (G) trong mê cung dạng lưới. Hệ thống không dừng ở một thuật toán tìm đường đơn thuần, mà tích hợp **6 nhóm thuật toán AI** (tổng cộng **18 thuật toán**) nhằm nghiên cứu và so sánh khả năng suy luận, lập kế hoạch và ra quyết định của tác nhân trong nhiều loại môi trường khác nhau: tĩnh, có thông tin, tối ưu cục bộ, không xác định, có ràng buộc và đối kháng.
+- Giao diện chính.
+  <img width="1920" height="1000" alt="2aOboQixUfbxHF2Z0pEZR67plSp23KRSDy1EPEYK" src="https://github.com/user-attachments/assets/3d5874cf-2d17-4e4c-918f-6c6d09f30321" />
 
->  **[Chèn ảnh]** Ảnh chụp màn hình giao diện chính của chương trình (menu chọn thuật toán + bản đồ mê cung).
-
----
 
 ##  Mục tiêu đồ án
 
