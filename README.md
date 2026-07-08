@@ -29,42 +29,10 @@
 
 Ký hiệu bản đồ: `P` = Pacman, `G` = Goal, `W` = Wall, khoảng trắng = ô trống.
 - Trạng thái bắt đầu
-	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19
-0	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W
-1	P									W										W
-2	W				W	W	W	W		W			W			W				W
-3	W				W					W			W			W				W
-4	W				W			W	W	W	W	W	W			W				W
-5	W				W								W			W				W
-6	W				W	W	W	W	W				W			W				W
-7	W												W			W				W
-8	W			W	W	W	W	W	W				W			W				W
-9	W			W									W			W				W
-10	W			W				W	W	W	W	W	W			W				W
-11	W			W												W				W
-12	W			W	W	W	W	W	W	W	W	W	W	W	W	W				W
-13	W																			G
-14	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W
+<img width="683" height="424" alt="image" src="https://github.com/user-attachments/assets/7c89fa1b-241b-4fdd-b355-be6815fe0911" />
 
-  
 - Trạng thái kết thúc
-	0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15	16	17	18	19
-0	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W
-1										W										W
-2	W				W	W	W	W		W			W			W				W
-3	W				W					W			W			W				W
-4	W				W			W	W	W	W	W	W			W				W
-5	W				W								W			W				W
-6	W				W	W	W	W	W				W			W				W
-7	W												W			W				W
-8	W			W	W	W	W	W	W				W			W				W
-9	W			W									W			W				W
-10	W			W				W	W	W	W	W	W			W				W
-11	W			W												W				W
-12	W			W	W	W	W	W	W	W	W	W	W	W	W	W				W
-13	W																			P
-14	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W
-
+<img width="675" height="422" alt="image" src="https://github.com/user-attachments/assets/9684c05c-c3ab-463b-a05e-0f3c9a703117" />
 
 ---
 
