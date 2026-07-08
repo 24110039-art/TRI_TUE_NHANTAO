@@ -1,15 +1,15 @@
 # TRI_TUE_NHANTAO
-# 🟡 Pacman AI – Mô phỏng và So sánh 18 Thuật toán Trí tuệ Nhân tạo
+#  Pacman AI – Mô phỏng và So sánh 18 Thuật toán Trí tuệ Nhân tạo
 
-## 📌 Giới thiệu
+##  Giới thiệu
 
 Đồ án xây dựng hệ thống mô phỏng trò chơi **Pacman** trên nền tảng đồ họa 2D (Python + Pygame), trong đó tác nhân Pacman phải tự động tìm đường từ vị trí xuất phát (P) đến đích (G) trong mê cung dạng lưới. Hệ thống không dừng ở một thuật toán tìm đường đơn thuần, mà tích hợp **6 nhóm thuật toán AI** (tổng cộng **18 thuật toán**) nhằm nghiên cứu và so sánh khả năng suy luận, lập kế hoạch và ra quyết định của tác nhân trong nhiều loại môi trường khác nhau: tĩnh, có thông tin, tối ưu cục bộ, không xác định, có ràng buộc và đối kháng.
 
-> 🖼️ **[Chèn ảnh]** Ảnh chụp màn hình giao diện chính của chương trình (menu chọn thuật toán + bản đồ mê cung).
+>  **[Chèn ảnh]** Ảnh chụp màn hình giao diện chính của chương trình (menu chọn thuật toán + bản đồ mê cung).
 
 ---
 
-## 🎯 Mục tiêu đồ án
+##  Mục tiêu đồ án
 
 - Nghiên cứu và triển khai các thuật toán tìm kiếm trong AI.
 - Xây dựng hệ thống mô phỏng Pacman AI trên môi trường mê cung 2D.
@@ -18,7 +18,7 @@
 
 ---
 
-## 🧩 Mô hình hóa bài toán (PEAS)
+##  Mô hình hóa bài toán (PEAS)
 
 | Thành phần | Mô tả |
 |---|---|
@@ -28,12 +28,43 @@
 | **S – Sensors** | GPS (vị trí), Collision (tường), Cost (bản đồ chi phí), Radar (vị trí Ghost), Memory (lịch sử di chuyển) |
 
 Ký hiệu bản đồ: `P` = Pacman, `G` = Goal, `W` = Wall, khoảng trắng = ô trống.
-
-> 🖼️ **[Chèn ảnh]** Ảnh bản đồ mê cung ở trạng thái bắt đầu và trạng thái đích (2 ảnh minh họa từ báo cáo, mục II.1).
+- Trạng thái bắt đầu
+0	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W
+1	P									W										W
+2	W				W	W	W	W		W			W			W				W
+3	W				W					W			W			W				W
+4	W				W			W	W	W	W	W	W			W				W
+5	W				W								W			W				W
+6	W				W	W	W	W	W				W			W				W
+7	W												W			W				W
+8	W			W	W	W	W	W	W				W			W				W
+9	W			W									W			W				W
+10	W			W				W	W	W	W	W	W			W				W
+11	W			W												W				W
+12	W			W	W	W	W	W	W	W	W	W	W	W	W	W				W
+13	W																			G
+14	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W
+  
+- Trạng thái kết thúc
+0	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W
+1										W										W
+2	W				W	W	W	W		W			W			W				W
+3	W				W					W			W			W				W
+4	W				W			W	W	W	W	W	W			W				W
+5	W				W								W			W				W
+6	W				W	W	W	W	W				W			W				W
+7	W												W			W				W
+8	W			W	W	W	W	W	W				W			W				W
+9	W			W									W			W				W
+10	W			W				W	W	W	W	W	W			W				W
+11	W			W												W				W
+12	W			W	W	W	W	W	W	W	W	W	W	W	W	W				W
+13	W																			P
+14	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W	W
 
 ---
 
-## 🧠 6 nhóm thuật toán đã triển khai
+##  6 nhóm thuật toán đã triển khai
 
 | Nhóm | Tên nhóm | Thuật toán đại diện |
 |---|---|---|
@@ -45,9 +76,18 @@ Ký hiệu bản đồ: `P` = Pacman, `G` = Goal, `W` = Wall, khoảng trắng =
 | 6 | Tìm kiếm đối kháng (Adversarial Search) | **Minimax**, Alpha-Beta Pruning, Expectimax |
 
 Mỗi thuật toán được demo trực tiếp trên cùng một bản đồ để đảm bảo tính công bằng khi so sánh.
-
-> 🎞️ **[Chèn GIF]** Với mỗi thuật toán ở trên, chèn 1 GIF demo (quay từ ezgif.com) minh họa Pacman chạy thuật toán đó trên bản đồ — đặt ngay bên dưới tên thuật toán tương ứng, hoặc gom thành bảng 3 cột như bố cục trong báo cáo gốc (3 ảnh/nhóm, mỗi ảnh 1 thuật toán).
-
+- Nhóm thuật toán tìm kiếm mù
+  <img width="2384" height="1798" alt="Nhom1" src="https://github.com/user-attachments/assets/ecf98974-955c-4cdb-a483-e6953392ea1e" />
+- Nhóm thuật toán tìm kiếm có thông tin
+  <img width="2384" height="1798" alt="Nhom2" src="https://github.com/user-attachments/assets/d1910ba6-032a-4d44-913f-08df9911e34d" />
+- Nhóm thuật toán tối ưu hóa cục bộ
+  <img width="2384" height="1798" alt="Nhom3" src="https://github.com/user-attachments/assets/318733e1-6890-4147-9fe6-444ebc13187c">
+- Nhóm môi trường không xác định
+  <img width="2384" height="1798" alt="Nhom4" src="https://github.com/user-attachments/assets/3090a17e-f2ba-4f37-91ed-b802a9215b90" />
+- Nhóm bài toán thỏa mãn ràng buộc
+  <img width="800" height="603" alt="Nhom5" src="https://github.com/user-attachments/assets/052b8be5-3d01-4178-9f21-7f6cd8c2f2db" />
+- Nhóm thuật toán tìm kiếm đối kháng
+  <img width="800" height="603" alt="Nhom6" src="https://github.com/user-attachments/assets/94bb0fe2-423f-44ce-9025-bde6a962faa3" />
 ---
 
 ##  Bảng so sánh chi tiết (dựa trên số liệu thực nghiệm trong báo cáo)
@@ -102,8 +142,18 @@ Mỗi thuật toán được demo trực tiếp trên cùng một bản đồ đ
 | Alpha-Beta Pruning | 2 | 76 bước | 0.12 ms (nhanh nhất) | Cùng chất lượng Minimax, nhanh gấp ~3 lần nhờ cắt tỉa |
 | Expectimax | 2 | 30 bước (ngắn nhất) | — | Tối ưu theo kỳ vọng, phù hợp Ghost di chuyển ngẫu nhiên |
 
->  **[Chèn ảnh]** Có thể chèn ảnh chụp bảng số liệu gốc từ báo cáo (media/image23–28) cạnh mỗi bảng ở trên nếu muốn giữ đúng định dạng biểu đồ gốc.
-
+- Tìm kiếm điểm mù 
+<img width="936" height="165" alt="image" src="https://github.com/user-attachments/assets/ae05cbff-a3a9-4d6b-9973-323f1507a73c" />
+- Tìm kiếm có thông tin 
+- <img width="852" height="166" alt="image" src="https://github.com/user-attachments/assets/e67e020a-2b8f-44e8-96e9-29e095bab1d9" />
+- Thuật toán tối ưu hóa cục bộ
+- <img width="864" height="179" alt="image" src="https://github.com/user-attachments/assets/99d453d2-b7ed-48dc-9b44-4918483b5a62" />
+- Môi trường không xác định
+- <img width="865" height="183" alt="image" src="https://github.com/user-attachments/assets/4d790ded-efc3-4441-9727-a915ade011ef" />
+- Thõa mãn ràng buộc
+- <img width="877" height="193" alt="image" src="https://github.com/user-attachments/assets/d58f2101-46c9-4b5c-a37c-f7a8bc8059fa" />
+- Thuật toán tiềm kiếm đối kháng
+- <img width="905" height="191" alt="image" src="https://github.com/user-attachments/assets/064f3521-1a58-482e-a7ac-764c5f18963e" />
 ---
 
 ##  Nhận định so sánh giữa các nhóm
@@ -134,23 +184,3 @@ Mỗi thuật toán được demo trực tiếp trên cùng một bản đồ đ
 - Bổ sung Monte Carlo Tree Search, Genetic Algorithm.
 - Mở rộng bản đồ lớn hơn, sinh ngẫu nhiên, nhiều Ghost với chiến thuật khác nhau.
 - Thêm công cụ thống kê tự động (thời gian, số nút, chi phí, tỷ lệ thành công).
-
----
-
-## Thành viên nhóm 8
-
-| Họ và tên | MSSV |
-|---|---|
-| Đào Nguyên Phương Thảo | 24110056 |
-| Huỳnh Trương Tuyết Như | 24110041 |
-| Cao Nguyên | 24110039 |
-
----
-
-> Ghi chú : các vị trí có nhãn 🖼️/🎞️ ở trên là nơi nên chèn ảnh chụp màn hình hoặc GIF demo tương ứng. Sau khi upload ảnh/gif vào repo (ví dụ thư mục `assets/`), chỉ cần thay dòng chú thích bằng cú pháp Markdown: `![Mô tả ảnh](assets/ten-file.gif)`.
-<img width="800" height="603" alt="Nhom6" src="https://github.com/user-attachments/assets/94bb0fe2-423f-44ce-9025-bde6a962faa3" />
-<img width="800" height="603" alt="Nhom5" src="https://github.com/user-attachments/assets/052b8be5-3d01-4178-9f21-7f6cd8c2f2db" />
-<img width="2384" height="1798" alt="Nhom4" src="https://github.com/user-attachments/assets/3090a17e-f2ba-4f37-91ed-b802a9215b90" />
-<img width="2384" height="1798" alt="Nhom3" src="https://github.com/user-attachments/assets/318733e1-6890-4147-9fe6-444ebc13187c" />
-<img width="2384" height="1798" alt="Nhom2" src="https://github.com/user-attachments/assets/d1910ba6-032a-4d44-913f-08df9911e34d" />
-<img width="2384" height="1798" alt="Nhom1" src="https://github.com/user-attachments/assets/ecf98974-955c-4cdb-a483-e6953392ea1e" />
